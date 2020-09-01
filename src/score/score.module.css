@@ -1,0 +1,9 @@
+.score {
+    border: 3px solid;
+}
+
+.score>div {
+    background-color: red;
+    height: 50px;
+    width: 10%;
+}

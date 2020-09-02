@@ -6,11 +6,14 @@ export const MultipleChoice = (props) => {
         e.stopPropagation();
         props.onClick(e.target.innerHTML);
     };
-    const options = props.options.map((e, i) => (
-        <li key={i} onClick={handleClick}>
-            {e}
-        </li>
-    ));
 
-    return <ul className={classes.multipleChoice}>{options}</ul>;
+    return (
+        <ul className={classes.multipleChoice}>
+            {props.options?.map((e, i) => (
+                <li key={i} onClick={handleClick}>
+                    {e}
+                </li>
+            ))}
+        </ul>
+    );
 };

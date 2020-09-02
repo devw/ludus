@@ -2,9 +2,10 @@ import React from "react";
 import classes from "./score.module.css";
 
 export const Score = (props) => {
+    const { score } = props;
     const scoreStyle = {
-        width: props.score,
-        backgroundColor: parseInt(props.score) > 20 ? "green" : "red",
+        width: score,
+        backgroundColor: parseInt(score) > 20 ? "green" : "red",
     };
     return (
         <div className={classes.score}>

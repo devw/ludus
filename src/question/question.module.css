@@ -1,4 +1,4 @@
-.question {
+.question div {
     font-size: 40px;
-    display: flex;
+    display: inline-block;
 }

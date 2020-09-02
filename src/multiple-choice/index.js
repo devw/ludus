@@ -7,10 +7,8 @@ export const MultipleChoice = (props) => {
         props.onClick(e.target.innerHTML);
     };
     const options = props.options.map((e, i) => (
-        <li key={i}>
-            <div href="#" onClick={handleClick}>
-                {e}
-            </div>
+        <li key={i} onClick={handleClick}>
+            {e}
         </li>
     ));
 

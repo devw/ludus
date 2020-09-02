@@ -1,9 +1,9 @@
 .score {
-    border: 3px solid;
+    width: 95%;
 }
 
-.score>div {
-    background-color: red;
+.score > div {
     height: 50px;
-    width: 10%;
+    font-size: 40px;
+    padding: 10px 20px;
 }

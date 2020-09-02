@@ -1,8 +1,14 @@
 import React from "react";
 import classes from "./score.module.css";
 
-export const Score = () => (
-    <div id="bar-contaiener" className={classes.score}>
-        <div id="bar"></div>
-    </div>
-);
+export const Score = (props) => {
+    const scoreStyle = {
+        width: props.score,
+        backgroundColor: parseInt(props.score) > 20 ? "green" : "red",
+    };
+    return (
+        <div className={classes.score}>
+            <div style={scoreStyle}>{props.score}</div>
+        </div>
+    );
+};

@@ -1,23 +1,16 @@
 .multipleChoice li {
-    display: inline-block;
-    list-style: none;
-    margin: 10px;
-}
-
-.multipleChoice div {
-    box-shadow: inset 0px 1px 0px 0px #ffffff;
     background-color: #ededed;
     border-radius: 6px;
     border: 1px solid #dcdcdc;
-    display: inline-block;
-    cursor: pointer;
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
     color: #777777;
-    font-family: Arial;
+    cursor: pointer;
+    display: inline-block;
     font-size: 30px;
-    font-weight: bold;
+    margin-right: 10px;
     padding: 6px 24px;
 }
 
-.multipleChoice div:hover {
+.multipleChoice li:hover {
     background-color: #dfdfdf;
 }

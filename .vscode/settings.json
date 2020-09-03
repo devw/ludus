@@ -6,7 +6,6 @@
         "public": true,
         "**/.pnp.js": true,
         "coverage": true,
-        "build": true,
         "**/.DS_Store": true,
         "**/.env.local": true,
         "**/.env.development.local": true,

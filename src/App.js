@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { Score } from "./score/";
+import { Question } from "./question/";
+import { MultipleChoice } from "./multiple-choice/";
+import { setQuestion, onReply } from "./services/handle-questions";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            score: "20%", // TODO
+        };
+        this.setQuestion = setQuestion.bind(this);
+        this.onReply = onReply.bind(this);
+    }
+
+    componentDidMount = () => {
+        this.setQuestion();
+    };
+
+    render = () => (
+        <div className="App">
+            <h1>Ludus</h1>
+            <Question question={this.state.question}></Question>
+            <MultipleChoice
+                onClick={this.onReply}
+                options={this.state.options}
+            ></MultipleChoice>
+            <Score score={this.state.score}></Score>
+        </div>
+    );
 }
 
 export default App;

@@ -1,0 +1,9 @@
+.score {
+    width: 95%;
+}
+
+.score > div {
+    height: 50px;
+    font-size: 40px;
+    padding: 10px 20px;
+}

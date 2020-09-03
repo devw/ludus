@@ -1,16 +1,27 @@
 export const setQuestion = function () {
-    const questions = ["2 + 3", "6 + 2", "3 + 4", "10 - 4", "8 - 3", "3 + 3"];
-    const question = questions[parseInt(Math.random() * questions.length)];
+    const question = getQuestion();
     this.setState({
         question: question,
-        options: [5, 6, 7, 8], // TODO
     });
 };
 
 export const onReply = function (response) {
     const { score, question } = this.state;
     Number(response) === eval(question)
-        ? this.setState({ score: Math.min(parseInt(score) + 10, 100) + "%" })
-        : this.setState({ score: Math.max(parseInt(score) - 10, 0) + "%" });
+        ? this.setState({ score: Math.min(parseInt(score) + 5, 100) + "%" })
+        : this.setState({ score: Math.max(parseInt(score) - 5, 0) + "%" });
     this.setQuestion();
 };
+
+const getQuestion = () => {
+    const operator = rand(2) > 0 ? "+" : "-";
+    return `${rand(100)} ${operator} ${rand(10)}`;
+};
+
+const getOptions = (question) => {
+    const result = eval(question);
+    const shift = rand(4) - 3;
+    return [...new Array(4)].map((e, i) => result + i + shift);
+};
+
+const rand = (num) => parseInt(Math.random() * num);

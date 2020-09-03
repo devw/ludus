@@ -9,7 +9,7 @@ export const Score = (props) => {
     };
     return (
         <div className={classes.score}>
-            <div style={scoreStyle}>{props.score}</div>
+            <div style={scoreStyle}>{score}</div>
         </div>
     );
 };

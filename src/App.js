@@ -8,7 +8,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            score: "20%", // TODO
+            score: "0%",
         };
         this.setQuestion = setQuestion.bind(this);
         this.onReply = onReply.bind(this);

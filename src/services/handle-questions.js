@@ -9,8 +9,8 @@ export const setQuestion = function () {
 
 export const onReply = function (response) {
     const { score, question } = this.state;
-    response == eval(question)
+    Number(response) === eval(question)
         ? this.setState({ score: Math.min(parseInt(score) + 10, 100) + "%" })
-        : this.setState({ score: parseInt(score) - 10 + "%" });
+        : this.setState({ score: Math.max(parseInt(score) - 10, 0) + "%" });
     this.setQuestion();
 };

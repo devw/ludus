@@ -2,6 +2,7 @@ export const setQuestion = function () {
     const question = getQuestion();
     this.setState({
         question: question,
+        options: getOptions(question),
     });
 };
 

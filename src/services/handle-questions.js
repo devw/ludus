@@ -1,5 +1,5 @@
 export const setQuestion = function () {
-    const questions = ["2 + 3", "3 + 4", "10 - 4", "8 - 3", "3 + 3"];
+    const questions = ["2 + 3", "6 + 2", "3 + 4", "10 - 4", "8 - 3", "3 + 3"];
     const question = questions[parseInt(Math.random() * questions.length)];
     this.setState({
         question: question,

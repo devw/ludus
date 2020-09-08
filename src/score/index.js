@@ -1,8 +1,7 @@
 import React from "react";
 import classes from "./score.module.css";
 
-export const Score = (props) => {
-    const { score } = props;
+export const Score = ({ score }) => {
     const scoreStyle = {
         width: score,
         backgroundColor: parseInt(score) > 20 ? "green" : "red",

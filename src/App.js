@@ -21,12 +21,12 @@ class App extends Component {
     render = () => (
         <div className="App">
             <h1>Ludus</h1>
-            <Question question={this.state.question}></Question>
+            <Question {...this.state}></Question>
             <MultipleChoice
                 onClick={this.onReply}
-                options={this.state.options}
+                {...this.state}
             ></MultipleChoice>
-            <Score score={this.state.score}></Score>
+            <Score {...this.state}></Score>
         </div>
     );
 }

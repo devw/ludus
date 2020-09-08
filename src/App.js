@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Score } from "./score/";
-import { Question } from "./question/";
-import { MultipleChoice } from "./multiple-choice/";
+import { Score } from "./score/score";
+import { Question } from "./question/question";
+import { MultipleChoice } from "./multiple-choice/multiple-choise";
 import { setQuestion, onReply } from "./services/handle-questions";
 
 class App extends Component {

@@ -9,9 +9,9 @@ class App extends Component {
         super(props);
         this.state = {
             score: "0%",
+            onReply: onReply.bind(this),
         };
         this.setQuestion = setQuestion.bind(this);
-        this.onReply = onReply.bind(this);
     }
 
     componentDidMount = () => {
@@ -22,10 +22,7 @@ class App extends Component {
         <div className="App">
             <h1>Ludus</h1>
             <Question {...this.state}></Question>
-            <MultipleChoice
-                onClick={this.onReply}
-                {...this.state}
-            ></MultipleChoice>
+            <MultipleChoice {...this.state}></MultipleChoice>
             <Score {...this.state}></Score>
         </div>
     );
